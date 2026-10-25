@@ -9,34 +9,34 @@
 <body><div class="floaters" id="floaters" aria-hidden="true"></div>
 <main class="card">
  <div class="eyebrow">A tiny message just for you</div>
- <img class="photo" src="assets/arsi_photo.jpg" alt="Arsi's photo">
- <img class="question-sticker" src="assets/love_question.webp" alt="Do you… do you love me? sticker">
+ <img class="photo" src="arsi_photo.jpg" alt="Arsi's photo">
+ <img class="question-sticker" src="love_question.webp" alt="Do you… do you love me? sticker">
  <h1 class="title">Arsi, do you… do you love me? 🥹💗</h1>
  <p class="intro">I wanted to ask you something special. No pressure—just a little question from me to you. 💌</p>
  <div class="buttons"><button class="yes" id="yesBtn">YES 💖</button><button class="no" id="noBtn">NO 🥺</button></div>
  <section class="reaction" id="reaction" aria-live="polite"></section>
- <section class="video-box"><h2>A little video for you, Arsi 💌</h2><video id="proposalVideo" controls playsinline preload="metadata"><source src="assets/proposal_video.mp4" type="video/mp4">Your browser does not support this video.</video><p class="caption">Tap play to watch the video. Its original sound is kept on. 🎬💗</p></section>
+ <section class="video-box"><h2>A little video for you, Arsi 💌</h2><video id="proposalVideo" controls playsinline preload="metadata"><source src="proposal_video.mp4" type="video/mp4">Your browser does not support this video.</video><p class="caption">Tap play to watch the video. Its original sound is kept on. 🎬💗</p></section>
  <section class="music-box"><h2>One song, a little feeling 🎶</h2><p class="caption" style="margin:0 0 10px">Chahun Main Ya Naa · Aashiqui 2</p><button class="music-button" id="musicBtn">🎵 Play romantic song</button><div class="youtube-player" id="youtubePlayer"><iframe id="ytFrame" title="Official Chahun Main Ya Naa music video" src="about:blank" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><p class="caption">The official YouTube player opens when you tap the button. Internet is needed; the browser may ask you to tap Play.</p></section>
  <div class="footer">Made with a little courage, lots of care & one very nervous heart ✨<br>Whatever your answer, it deserves respect. 💗</div>
 </main>
 <script>
 const floaterBox=document.getElementById('floaters');for(let i=0;i<24;i++){const e=document.createElement('span');e.className='floater';e.textContent=['💗','💕','♡','🌸','💖','✨'][Math.floor(Math.random()*6)];e.style.left=Math.random()*100+'%';e.style.fontSize=(15+Math.random()*19)+'px';e.style.animationDuration=(8+Math.random()*10)+'s';e.style.animationDelay=(-Math.random()*16)+'s';floaterBox.appendChild(e)}
 const reactions=[
- {title:'Please don’t say no 😭🐱',text:'My little heart is doing its best… pretty please? 🥺',img:'assets/crying_cat.gif',alt:'Crying cat'},
- {title:'Pretty please? 🥹',text:'Look at this face! Just a tiny please… no pressure, promise. 💗',img:'assets/pretty_please_cat.gif',alt:'Pretty please cat'},
- {title:'I brought a flower 🌹',text:'A little flower for you and one very nervous question. 🌷',img:'assets/love_question.webp',alt:'Cute character with a message'},
- {title:'My dramatic era has begun 😭',text:'Even the stickers are getting emotional now. 😂💔',img:'assets/crying_cat.gif',alt:'Crying cat'},
- {title:'Pretty, pretty please? 🐱',text:'One tiny request from this extremely polite cat. 🥺',img:'assets/pretty_please_cat.gif',alt:'Please cat'},
- {title:'A flower delivery just for you 💐',text:'Special delivery: one flower and a very shy smile. 💗',img:'assets/love_question.webp',alt:'Flower-holding character'},
- {title:'My heart is buffering… 💗',text:'Please wait while I gather my courage. Loading… 99% 🥹',img:'assets/crying_cat.gif',alt:'Crying cat'},
- {title:'I even brought backup 🥺',text:'The cat committee would like to make a polite appeal. 🐱',img:'assets/pretty_please_cat.gif',alt:'Pretty please cat'},
- {title:'One more little flower 🌸',text:'No fancy words—just a flower and an honest question. 💌',img:'assets/love_question.webp',alt:'Cute flower character'},
- {title:'The tears are cinematic now 😭',text:'This is officially the most dramatic button on the internet. 😂',img:'assets/crying_cat.gif',alt:'Crying cat'},
- {title:'Final-level pretty please 🥹',text:'You’ve unlocked the extra-cute cat reaction! 🐱💖',img:'assets/pretty_please_cat.gif',alt:'Pretty please cat'},
- {title:'A tiny final surprise 💌',text:'Whatever you choose, thank you for reading my little message. 🌷',img:'assets/love_question.webp',alt:'Cute character with a message'}
+ {title:'Please don’t say no 😭🐱',text:'My little heart is doing its best… pretty please? 🥺',img:'crying_cat.gif',alt:'Crying cat'},
+ {title:'Pretty please? 🥹',text:'Look at this face! Just a tiny please… no pressure, promise. 💗',img:'pretty_please_cat.gif',alt:'Pretty please cat'},
+ {title:'I brought a flower 🌹',text:'A little flower for you and one very nervous question. 🌷',img:'love_question.webp',alt:'Cute character with a message'},
+ {title:'My dramatic era has begun 😭',text:'Even the stickers are getting emotional now. 😂💔',img:'crying_cat.gif',alt:'Crying cat'},
+ {title:'Pretty, pretty please? 🐱',text:'One tiny request from this extremely polite cat. 🥺',img:'pretty_please_cat.gif',alt:'Please cat'},
+ {title:'A flower delivery just for you 💐',text:'Special delivery: one flower and a very shy smile. 💗',img:'love_question.webp',alt:'Flower-holding character'},
+ {title:'My heart is buffering… 💗',text:'Please wait while I gather my courage. Loading… 99% 🥹',img:'crying_cat.gif',alt:'Crying cat'},
+ {title:'I even brought backup 🥺',text:'The cat committee would like to make a polite appeal. 🐱',img:'pretty_please_cat.gif',alt:'Pretty please cat'},
+ {title:'One more little flower 🌸',text:'No fancy words—just a flower and an honest question. 💌',img:'love_question.webp',alt:'Cute flower character'},
+ {title:'The tears are cinematic now 😭',text:'This is officially the most dramatic button on the internet. 😂',img:'crying_cat.gif',alt:'Crying cat'},
+ {title:'Final-level pretty please 🥹',text:'You’ve unlocked the extra-cute cat reaction! 🐱💖',img:'pretty_please_cat.gif',alt:'Pretty please cat'},
+ {title:'A tiny final surprise 💌',text:'Whatever you choose, thank you for reading my little message. 🌷',img:'love_question.webp',alt:'Cute character with a message'}
 ];let noCount=0;
 function showReaction(title,text,img,alt){const box=document.getElementById('reaction');box.innerHTML='';const image=document.createElement('img');image.src=img;image.alt=alt;const h=document.createElement('h2');h.textContent=title;const p=document.createElement('p');p.textContent=text;box.append(image,h,p);box.style.display='block';box.scrollIntoView({behavior:'smooth',block:'nearest'})}
 document.getElementById('noBtn').addEventListener('click',()=>{const item=reactions[Math.min(noCount,reactions.length-1)];noCount++;showReaction(item.title,item.text,item.img,item.alt)});
-document.getElementById('yesBtn').addEventListener('click',()=>{showReaction('YAYYY, ARSI! 🥹💖','You made this little moment extra special! Thank you for sharing it with me. Let’s take things one step at a time. 🌹💌','assets/love_question.webp','Cute character with a message');for(let i=0;i<28;i++){const e=document.createElement('span');e.className='yes-hearts';e.textContent=['💖','💕','🌸','💗','✨'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'vw';e.style.top=(25+Math.random()*60)+'vh';e.style.fontSize=(18+Math.random()*24)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),1900)}});
+document.getElementById('yesBtn').addEventListener('click',()=>{showReaction('YAYYY, ARSI! 🥹💖','You made this little moment extra special! Thank you for sharing it with me. Let’s take things one step at a time. 🌹💌','love_question.webp','Cute character with a message');for(let i=0;i<28;i++){const e=document.createElement('span');e.className='yes-hearts';e.textContent=['💖','💕','🌸','💗','✨'][Math.floor(Math.random()*5)];e.style.left=Math.random()*100+'vw';e.style.top=(25+Math.random()*60)+'vh';e.style.fontSize=(18+Math.random()*24)+'px';document.body.appendChild(e);setTimeout(()=>e.remove(),1900)}});
 const musicBtn=document.getElementById('musicBtn'),player=document.getElementById('youtubePlayer'),frame=document.getElementById('ytFrame');musicBtn.addEventListener('click',()=>{if(player.style.display==='block'){player.style.display='none';frame.src='about:blank';musicBtn.textContent='🎵 Play romantic song';}else{player.style.display='block';frame.src='https://www.youtube-nocookie.com/embed/E9w2lAuVLsk?autoplay=1&rel=0';musicBtn.textContent='⏸ Hide music player';player.scrollIntoView({behavior:'smooth',block:'nearest'});}});
 </script></body></html>
